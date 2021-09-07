@@ -1,4 +1,4 @@
-# codeceptjs-bdd-dh-oranum-tests
+# codeceptjs-ts-bdd-web
 
 RECOMMENDED SECTIONS TO READ AND FOLLOW:
     - 1. Clone this project from [GitHub]
