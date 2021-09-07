@@ -3,7 +3,6 @@ const { I } = inject();
 class HomePage {
 
   locs = {
-    btnAgreeCookies: 'button[data-testid="accept-cookies-button"]',
     btnViewAllPsychics: 'a[data-testid="cta-button-to-live-search"]',
     btnHeaderSearch: 'div[data-testid="button-header-search"] a > div:first-of-type',
     cardLiveProfile: 'div[data-testid="live-status-box"]'
@@ -12,7 +11,7 @@ class HomePage {
   async openHome(url, expectedTitle) {
     I.amOnPage(url);
     I.grabDataFromPerformanceTiming();
-    I.click(this.locs.btnAgreeCookies);
+    I.click("Accept All");
     I.see(expectedTitle);
   }
 

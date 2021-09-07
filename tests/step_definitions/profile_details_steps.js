@@ -31,6 +31,6 @@ When('I press to start session', () => {
 });
 
 Then('a sign up modal is showed', () => {
-  profilePage.validateSignUpForFreeDisplayed();
+  profilePage.waitForSignUpForFreeDisplayed();
 });
 

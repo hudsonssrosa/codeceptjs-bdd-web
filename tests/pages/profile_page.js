@@ -15,7 +15,7 @@ class ProfilePage {
     btnQuickBuy: 'div[data-testid="toggle"] button[data-testid="quick-buy-button-applet"]',
     btnSendMessage: 'div[data-testid="toggle"] button[data-testid="messenger-button-applet"]',
     btnStartSession: 'div[data-testid="toggle"] button[data-testid="start-private-button-applet"]',
-    btnSignUpForFree: 'input[id="signup-submit"]'
+    btnSignUpForFree: '#signup-modal button[id="signup-submit"]'
   }
 
   validateAccessedProfileName(psychicName) {
@@ -59,9 +59,9 @@ class ProfilePage {
     I.forceClick(this.locslive.btnStartSession);
   }
 
-  validateSignUpForFreeDisplayed() {
+  waitForSignUpForFreeDisplayed() {
     I.waitForElement(this.locslive.btnSignUpForFree, timeout._7s);
-    I.seeElement(this.locslive.btnSignUpForFree);
+    I.waitForText("Join now!")
   }
 
 }
