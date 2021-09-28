@@ -1,0 +1,40 @@
+name: "Run Regression Testing Oranum"
+
+on: 
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches: 
+      - master
+  schedule:
+    - cron: '0 23 * * 5'
+  
+jobs:
+  smoke-tests:
+    runs-on: macos-latest
+
+    steps:
+      - name: CodeceptJS BDD Web
+        uses: actions/checkout@v2
+    
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm init -y
+          npm install --save-dev puppeteer
+          npm install codeceptjs playwright --save-dev
+          npm install -g allure-commandline --save-dev
+          npm i @codeceptjs/ui --save
+        
+      - name: Setup Node.js Environment
+        uses: microsoft/playwright-github-action@v1
+
+      - name: Run All Tests
+        run: |
+          npx codeceptjs run --features --steps

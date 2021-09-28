@@ -1,9 +1,9 @@
 const { I, homePage, resultsPage } = inject();
-const TestHelper = require('../helpers/test_helper');
+const env = require('../helpers/envConfig');
 
 
 Given('that Oranum website is open', () => {
-    homePage.openHome(TestHelper.oranumUrl(), 'Oranum.com');
+    homePage.openHome(env.setApp().production.url);
 });
 
 Given('that I scroll until the View All Live Psychics', () => {

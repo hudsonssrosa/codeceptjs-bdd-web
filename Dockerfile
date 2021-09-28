@@ -26,6 +26,7 @@ ENV JAVA_HOME=/usr
 
 # Installing NPM and Dependencies: Codeceptjs, Allure
 RUN npm install -g npm \
+    && npm i -g npm-check-updates \
     && npm init -y \
     && npm install --save-dev puppeteer \
     && npm install codeceptjs playwright --save-dev \

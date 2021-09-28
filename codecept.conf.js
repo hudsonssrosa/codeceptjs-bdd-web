@@ -2,10 +2,10 @@
 // setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-  tests: './tests/*test.js',
+  tests: '.tests/*test.+(ts|js)',
   output: './output',
   timeout: 10000,
-  name: 'codeceptjs-ts-bdd-web',
+  name: 'codeceptjs-bdd-web',
   hooks: [],
   bootstrap: null,
 
@@ -19,8 +19,8 @@ exports.config = {
     SetupBlocks: {
       require: './tests/helpers/setupblocks_helper.js'
     },
-    TestHelper: {
-      require: './tests/helpers/test_helper.js'
+    PageHelper: {
+      require: './tests/helpers/page_helper.js'
     },
   },
 

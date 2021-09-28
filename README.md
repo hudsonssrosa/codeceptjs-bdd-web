@@ -1,4 +1,4 @@
-# codeceptjs-ts-bdd-web
+# codeceptjs-bdd-web
 
 RECOMMENDED SECTIONS TO READ AND FOLLOW:
     - 1. Clone this project from [GitHub]
@@ -6,30 +6,30 @@ RECOMMENDED SECTIONS TO READ AND FOLLOW:
     - 3. Run the tests locally
     - 4. Run dockerized tests (RECOMMENDED)
 
-## 1. Clone this project from [GitHub](https://github.com/hudsonssrosa/codeceptjs-ts-bdd-web)
+## 1. Clone this project from [GitHub](https://github.com/hudsonssrosa/codeceptjs-bdd-web)
 
-Into your own local repository with Git initialized, clone the **codeceptjs-ts-bdd-web** by running this command:
+Into your own local repository with Git initialized, clone the **codeceptjs-bdd-web** by running this command:
 
 ```bash
     cd ./your-own-local-repo/
-    git clone git@github.com:hudsonssrosa/codeceptjs-ts-bdd-web.git
+    git clone git@github.com:hudsonssrosa/codeceptjs-bdd-web.git
 ```
 
 ## 2. Install this project from the ground up locally
 
-In a terminal, into the `./codeceptjs-ts-bdd-web/` directory, run the shell script `./cc_local_installation.sh` to get installed CodeceptJS with Playwright and Allure Report as the minimum requirements for tests on BDD approach (with Gherkin already added in the `codecept.conf.js`):
+In a terminal, into the `./codeceptjs-bdd-web/` directory, run the shell script `./cc_local_installation.sh` to get installed CodeceptJS with Playwright and Allure Report as the minimum requirements for tests on BDD approach (with Gherkin already added in the `codecept.conf.js`):
 
 - For MacOS and Linux:
 
 ```bash
-    cd codeceptjs-ts-bdd-web/
+    cd codeceptjs-bdd-web/
     sh cc_local_installation.sh
 ```
 
 - For Windows 10:
 
 ```bash
-    cd codeceptjs-ts-bdd-web/
+    cd codeceptjs-bdd-web/
     ./cc_local_installation.sh
 ```
 
@@ -52,19 +52,19 @@ For now, you could ignore these changes:
     }
 ```
 
-Then, ensure that you are into the `./codeceptjs-ts-bdd-web/` directory and run **ALL THE TESTS** through the `run_tests_locally` script:
+Then, ensure that you are into the `./codeceptjs-bdd-web/` directory and run **ALL THE TESTS** through the `run_tests_locally` script:
 
 - For MacOS and Linux:
 
 ```bash
-    cd codeceptjs-ts-bdd-web/
+    cd codeceptjs-bdd-web/
     sh run_tests_locally.sh
 ```
 
 - For Windows 10:
 
 ```bash
-    cd codeceptjs-ts-bdd-web/
+    cd codeceptjs-bdd-web/
     ./run_tests_locally.sh
 ```
 
@@ -152,14 +152,14 @@ Having that requirement met, then follow the instructions below to build an imag
 - RECOMMENDED command:
 
 ```bash
-    cd ./codeceptjs-ts-bdd-web/
-    docker-compose run --rm codeceptjs-bdd-oranum
+    cd ./codeceptjs-bdd-web/
+    docker-compose run --rm codeceptjs-bdd-web
 ```
 
 - Other execution ways:
 
 ```bash
-    # docker-compose run -e CROSSBROWSER=multi --rm codeceptjs-bdd-oranum
-    # docker-compose run -e TAG=<PASTE_THE_TAG_HERE> --rm codeceptjs-bdd-oranum
-    # docker-compose run -e TAG=<PASTE_THE_TAG_HERE> -e CROSSBROWSER=multi --rm codeceptjs-bdd-oranum
+    # docker-compose run -e CROSSBROWSER=multi --rm codeceptjs-bdd-web
+    # docker-compose run -e TAG=<PASTE_THE_TAG_HERE> --rm codeceptjs-bdd-web
+    # docker-compose run -e TAG=<PASTE_THE_TAG_HERE> -e CROSSBROWSER=multi --rm codeceptjs-bdd-web
 ```

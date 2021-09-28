@@ -13,6 +13,14 @@ elif [ ${1} == "ccui" ] ; then
     echo "Opening Codecept UI..."
     npx codecept-ui --app --features
 
+# Running Dockerized tests
+elif [ ${1} == "docker" ] ; then
+    docker-compose run --rm codeceptjs-bdd-web
+
+# Running Dockerized tests in parallel
+elif [ ${1} == "docker_multi" ] ; then
+    docker-compose run -e CROSSBROWSER=multi --rm codeceptjs-bdd-web
+
 # Single or multiple browsers with or withot Feature / Scenario tags
 else
     with_parallel=""

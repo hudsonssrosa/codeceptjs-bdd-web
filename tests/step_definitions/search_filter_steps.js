@@ -1,5 +1,4 @@
-const { I, homePage, resultsPage, profilePage } = inject();
-const assert = require('assert');
+const { I, homePage, resultsPage, profilePage, assert } = inject();
 
 
 When('I type "{word}" on search', (name) => {

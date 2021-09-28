@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Install CodeceptJs - Dev dependencies (including Allure)
+# brew install node
 npm install -g npm
 npm init -y
+npm install --save-dev typescript
 npm install --save-dev puppeteer
 npm install codeceptjs playwright --save-dev
 npm install -g allure-commandline --save-dev
