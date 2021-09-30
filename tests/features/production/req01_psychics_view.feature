@@ -1,4 +1,4 @@
-@view-all-psychics @acceptance
+@view-all-psychics @qa_ready @acceptance
 Feature: View All Psychics 
 	In order to view all psychics information
 	As a user

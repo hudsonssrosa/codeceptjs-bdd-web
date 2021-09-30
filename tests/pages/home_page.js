@@ -8,13 +8,6 @@ class HomePage {
     cardLiveProfile: 'div[data-testid="live-status-box"]'
   }
 
-  async openHome(url, expectedTitle) {
-    I.amOnPage(url);
-    I.grabDataFromPerformanceTiming();
-    I.click("Accept All");
-    I.see(expectedTitle);
-  }
-
   pressHeaderSearchButton() {
     I.click(this.locs.btnHeaderSearch);
   }

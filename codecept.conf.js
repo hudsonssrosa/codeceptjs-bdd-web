@@ -16,12 +16,9 @@ exports.config = {
       browser: 'firefox', // chromium is presenting flaky tests when interacting with video streaming pages
       waitForNavigation: "networkidle0"
     },
-    SetupBlocks: {
-      require: './tests/helpers/setupblocks_helper.js'
-    },
-    PageHelper: {
-      require: './tests/helpers/page_helper.js'
-    },
+    SetupHelper: {
+      require: './tests/helpers/setup_helper.js'
+    }
   },
 
   include: {
@@ -32,7 +29,7 @@ exports.config = {
   },
 
   gherkin: {
-    features: './tests/features/*.feature',
+    features: './tests/features/**/*.feature',
     steps: './tests/step_definitions/*_steps.js'
   },
 

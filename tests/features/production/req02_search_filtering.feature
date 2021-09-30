@@ -1,4 +1,4 @@
-@search-filtering @acceptance
+@search-filtering @qa_ready @acceptance
 Feature: Psychics Searching Results
 	In order to find psychics by a partial name
 	As a user

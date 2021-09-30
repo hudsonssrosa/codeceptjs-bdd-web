@@ -1,4 +1,4 @@
-@specific-search @acceptance
+@specific-search @qa_ready @acceptance
 Feature: Searching for a Specific Psychic
 	In order to find a known psychic by its full name
 	As a user

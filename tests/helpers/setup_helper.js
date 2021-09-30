@@ -1,10 +1,9 @@
 const Helper = require('@codeceptjs/helper');
 const execSync = require('child_process').execSync;
 const utf8 = { encoding: 'utf-8' };
-let state = {}
+const dotenv = require('dotenv');
 
-class SetupBlocks extends Helper {
-
+class SetupHelper extends Helper {
 
   /**
    * @protected
@@ -12,11 +11,10 @@ class SetupBlocks extends Helper {
   _init() {
     execSync('rm -rf output/*', utf8);
     execSync('rm -rf allure-results/*', utf8);
+    console.log('Cleaning up output directories: \n- /output \n- /allure-results')
+    dotenv.config();
   }
 
-  _before(test) {
-    state = {};
-  }
 
   /**
    * @protected
@@ -29,4 +27,4 @@ class SetupBlocks extends Helper {
 
 }
 
-module.exports = SetupBlocks;
+module.exports = SetupHelper;

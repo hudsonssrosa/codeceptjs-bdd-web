@@ -4,6 +4,7 @@
 # brew install node
 npm install -g npm
 npm init -y
+npm install -g dotenv
 npm install --save-dev typescript
 npm install --save-dev puppeteer
 npm install codeceptjs playwright --save-dev

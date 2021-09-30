@@ -1,10 +1,19 @@
 // in this file you can append custom step methods to 'I' object
+module.exports = function () {
 
-module.exports = function() {
+  const locs = { 'btnAcceptAllCookies': 'Accept All' };
+
   return actor({
 
-    // Define custom steps here, use 'this' to access default methods of I.
-    // It is recommended to place a general 'login' function here.
+    openPage(url, expectedText = "") {
+      this.amOnPage(url);
+      this.grabDataFromPerformanceTiming();
+      this.see(expectedText);
+    },
+
+    acceptCookies() {
+      this.click(locs.btnAcceptAllCookies);
+    }
 
   });
 }

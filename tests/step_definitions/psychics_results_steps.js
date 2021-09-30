@@ -1,4 +1,5 @@
-const { I, homePage, resultsPage, assert } = inject();
+const { I, homePage, resultsPage } = inject();
+const assert = require('assert');
 
 
 Given('that all the live psychics are viewed', () => {
